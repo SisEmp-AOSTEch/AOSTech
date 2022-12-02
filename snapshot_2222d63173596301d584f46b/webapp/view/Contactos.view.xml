@@ -1,0 +1,95 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.manageProducts.controller.Contactos" xmlns="sap.m" xmlns:layout1="sap.ui.layout" xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+        <content>
+            <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout:positions>
+                    <layout:PositionContainer left="143px" top="172px">
+                        <layout:control>
+                            <Image src="https://cdn.discordapp.com/attachments/805190612847558677/1045023879686529125/whatsapp.png" height="70px" width="70px" visible="true" densityAware="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="251px" top="224px">
+                        <layout:control>
+                            <Link href="https://chat.whatsapp.com/CtvoQt3eGHw0vse2sTYWgl" text="Escribenos" textAlign="Begin" width="282.609375px" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="241px" top="178px">
+                        <layout:control>
+                            <FormattedText htmlText="&lt;h1> Whatsapp &lt;/h1>" width="200px" height="39.640625px" visible="true"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="753px" top="165px">
+                        <layout:control>
+                            <Image src="https://cdn.discordapp.com/attachments/805190612847558677/1045023879313240154/telephone.png" height="70px" width="70px" visible="true" densityAware="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="855px" top="213px">
+                        <layout:control>
+                            <Link href="https://chat.whatsapp.com/CtvoQt3eGHw0vse2sTYWgl" text="+57 55 1673 4490" textAlign="Begin" width="282.609375px" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="857px" top="167px">
+                        <layout:control>
+                            <FormattedText htmlText="&lt;h1> Llamanos &lt;/h1>" width="200px" height="39.640625px" visible="true"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="220px" top="471px">
+                        <layout:control>
+                            <layout1:VerticalLayout width="35%" visible="true">
+                                <layout1:content/>
+                            </layout1:VerticalLayout>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="756px" top="366px">
+                        <layout:control>
+                            <Image src="https://cdn.discordapp.com/attachments/805190612847558677/1045023878495350907/email.png" height="70px" width="70px" visible="true" densityAware="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="869px" top="415px">
+                        <layout:control>
+                            <Link href="https://chat.whatsapp.com/CtvoQt3eGHw0vse2sTYWgl" text="Escribenos" textAlign="Begin" width="282.609375px" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="863px" top="373px">
+                        <layout:control>
+                            <FormattedText htmlText="&lt;h1> PQRS &lt;/h1>" width="200px" height="39.640625px" visible="true"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="236px" top="359px">
+                        <layout:control>
+                            <FormattedText htmlText="&lt;h1> Visitanos &lt;/h1>" width="200px" height="39.640625px" visible="true"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="239px" top="398px">
+                        <layout:control>
+                            <FormattedText htmlText="Avenida Guadalupe entre 21 y 22 #145 Col, Guadalupe Proletaria, Ciudad de México, CDMX, Mexico" width="363.375px" height="54.375px" visible="true"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="139px" top="361px">
+                        <layout:control>
+                            <Image src="https://cdn.discordapp.com/attachments/805190612847558677/1045023878847668266/map.png" height="70px" width="70px" visible="true" densityAware="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="3px" top="4px">
+                        <layout:control>
+                            <SegmentedButton width="1277px" enabled="true" visible="true">
+                                <items>
+                                    <SegmentedButtonItem icon="https://cdn.discordapp.com/attachments/805190612847558677/1045023766582931467/AOS.jpg" text="AOTech Solutions" width="20%" enabled="false"/>
+                                    <SegmentedButtonItem icon="sap-icon://home" text="Inicio" width="16%" enabled="true" press="_onSegmentedButtonItemPress"/>
+                                    <SegmentedButtonItem icon="sap-icon://family-care" text="Nuestros aliados" width="16%" enabled="true" press="_onSegmentedButtonItemPress1"/>
+                                    <SegmentedButtonItem icon="sap-icon://accidental-leave" text="Seguros" width="16%" enabled="true" press="_onSegmentedButtonItemPress2"/>
+                                    <SegmentedButtonItem icon="sap-icon://compare" text="Comparar" width="16%" enabled="true" press="_onSegmentedButtonItemPress3"/>
+                                    <SegmentedButtonItem icon="sap-icon://contacts" text="Contactanos" width="16%" enabled="true" press="_onSegmentedButtonItemPress4"/>
+                                </items>
+                            </SegmentedButton>
+                        </layout:control>
+                    </layout:PositionContainer>
+                </layout:positions>
+            </layout:AbsoluteLayout>
+        </content>
+        <footer/>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

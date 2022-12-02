@@ -1,0 +1,41 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.manageProducts.controller.Inicio" xmlns="sap.m" xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="true" enableScrolling="false">
+        <content>
+            <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout:positions>
+                    <layout:PositionContainer left="127px" top="97px">
+                        <layout:control>
+                            <Image src="https://cdn.discordapp.com/attachments/805190612847558677/1045023475863134259/WhatsApp_Image_2022-11-23_at_11.51.46_AM.jpeg" height="774px" width="1000px" visible="true" densityAware="false"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="3px" top="4px">
+                        <layout:control>
+                            <SegmentedButton width="1277px" enabled="true" visible="true">
+                                <items>
+                                    <SegmentedButtonItem icon="https://cdn.discordapp.com/attachments/805190612847558677/1045023766582931467/AOS.jpg" text="AOTech Solutions" width="20%" enabled="false"/>
+                                    <SegmentedButtonItem icon="sap-icon://home" text="Inicio" width="16%" enabled="true" press="_onSegmentedButtonItemPress"/>
+                                    <SegmentedButtonItem icon="sap-icon://family-care" text="Nuestros aliados" width="16%" enabled="true" press="_onSegmentedButtonItemPress1"/>
+                                    <SegmentedButtonItem icon="sap-icon://accidental-leave" text="Seguros" width="16%" enabled="true" press="_onSegmentedButtonItemPress2"/>
+                                    <SegmentedButtonItem icon="sap-icon://compare" text="Comparar" width="16%" enabled="true" press="_onSegmentedButtonItemPress3"/>
+                                    <SegmentedButtonItem icon="sap-icon://contacts" text="Contactanos" width="16%" enabled="true" press="_onSegmentedButtonItemPress4"/>
+                                </items>
+                            </SegmentedButton>
+                        </layout:control>
+                    </layout:PositionContainer>
+                </layout:positions>
+            </layout:AbsoluteLayout>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

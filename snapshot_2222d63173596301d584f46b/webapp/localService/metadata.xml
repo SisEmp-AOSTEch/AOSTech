@@ -1,0 +1,125 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="e1e64921f15641331835a940" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="e1e64921f15641331835a940_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="ProductSet" EntityType="e1e64921f15641331835a940.Product" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="ProductReviewsReview" Association="e1e64921f15641331835a940.ProductReviewsReview" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="ProductSet" Role="FromRole_ProductReviewsReview"/>
+                    <End EntitySet="ReviewSet" Role="ToRole_ProductReviewsReview"/>
+                </AssociationSet>
+                <AssociationSet Name="ProductSupplierSupplier" Association="e1e64921f15641331835a940.ProductSupplierSupplier" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="ProductSet" Role="FromRole_ProductSupplierSupplier"/>
+                    <End EntitySet="SupplierSet" Role="ToRole_ProductSupplierSupplier"/>
+                </AssociationSet>
+                <EntitySet Name="SupplierSet" EntityType="e1e64921f15641331835a940.Supplier" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="ReviewSet" EntityType="e1e64921f15641331835a940.Review" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="ReviewProductProduct" Association="e1e64921f15641331835a940.ReviewProductProduct" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="ReviewSet" Role="FromRole_ReviewProductProduct"/>
+                    <End EntitySet="ProductSet" Role="ToRole_ReviewProductProduct"/>
+                </AssociationSet>
+                <EntitySet Name="ComparacionSet" EntityType="e1e64921f15641331835a940.Comparacion" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="Product">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+                <Property Name="Category" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Category"/>
+                <Property Name="Price" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Price"/>
+                <Property Name="Currency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Currency"/>
+                <Property Name="FormaPago" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FormaPago"/>
+                <Property Name="Tipo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Tipo"/>
+                <Property Name="PriceRange" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PriceRange"/>
+                <Property Name="Descripcion" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Descripcion"/>
+                <Property Name="___FK_517c643638ee5e4e184c02f0_00025" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_517c643638ee5e4e184c02f0_00025"/>
+                <NavigationProperty Name="Reviews" Relationship="e1e64921f15641331835a940.ProductReviewsReview" FromRole="FromRole_ProductReviewsReview" ToRole="ToRole_ProductReviewsReview"/>
+                <NavigationProperty Name="Supplier" Relationship="e1e64921f15641331835a940.ProductSupplierSupplier" FromRole="FromRole_ProductSupplierSupplier" ToRole="ToRole_ProductSupplierSupplier"/>
+            </EntityType>
+            <Association Name="ProductReviewsReview">
+                <End Type="e1e64921f15641331835a940.Product" Multiplicity="1" Role="FromRole_ProductReviewsReview"/>
+                <End Type="e1e64921f15641331835a940.Review" Multiplicity="*" Role="ToRole_ProductReviewsReview"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProductReviewsReview">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_ProductReviewsReview">
+                        <PropertyRef Name="___FK_517c643638ee5e4e184c02f0_00023"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProductSupplierSupplier">
+                <End Type="e1e64921f15641331835a940.Product" Multiplicity="1" Role="FromRole_ProductSupplierSupplier"/>
+                <End Type="e1e64921f15641331835a940.Supplier" Multiplicity="1" Role="ToRole_ProductSupplierSupplier"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_ProductSupplierSupplier">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_ProductSupplierSupplier">
+                        <PropertyRef Name="___FK_517c643638ee5e4e184c02f0_00025"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Supplier">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+                <Property Name="email" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="email"/>
+                <Property Name="Phone" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Phone"/>
+                <Property Name="URI" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="URI"/>
+                <Property Name="Image" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Image"/>
+                <Property Name="Descripcion" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Descripcion"/>
+            </EntityType>
+            <EntityType Name="Review">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Rating" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Rating"/>
+                <Property Name="Reviewer" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Reviewer"/>
+                <Property Name="ReviewDate" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ReviewDate"/>
+                <Property Name="ReviewText" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ReviewText"/>
+                <Property Name="___FK_517c643638ee5e4e184c02f0_00023" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_517c643638ee5e4e184c02f0_00023"/>
+                <Property Name="___FK_517c643638ee5e4e184c02f0_00027" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_517c643638ee5e4e184c02f0_00027"/>
+                <NavigationProperty Name="Product" Relationship="e1e64921f15641331835a940.ReviewProductProduct" FromRole="FromRole_ReviewProductProduct" ToRole="ToRole_ReviewProductProduct"/>
+            </EntityType>
+            <Association Name="ReviewProductProduct">
+                <End Type="e1e64921f15641331835a940.Review" Multiplicity="1" Role="FromRole_ReviewProductProduct"/>
+                <End Type="e1e64921f15641331835a940.Product" Multiplicity="1" Role="ToRole_ReviewProductProduct"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_ReviewProductProduct">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_ReviewProductProduct">
+                        <PropertyRef Name="___FK_517c643638ee5e4e184c02f0_00027"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Comparacion">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+                <Property Name="Category" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Category"/>
+                <Property Name="Price" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Price"/>
+                <Property Name="Currency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Currency"/>
+                <Property Name="FormaPago" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FormaPago"/>
+                <Property Name="Tipo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Tipo"/>
+                <Property Name="PriceRange" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PriceRange"/>
+                <Property Name="Descripcion" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Descripcion"/>
+                <Property Name="ID2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID2"/>
+                <Property Name="Name2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name2"/>
+                <Property Name="Category2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Category2"/>
+                <Property Name="Price2" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Price2"/>
+                <Property Name="Currency2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Currency2"/>
+                <Property Name="FormaPago2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="FormaPago2"/>
+                <Property Name="Tipo2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Tipo2"/>
+                <Property Name="PriceRange2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="PriceRange2"/>
+                <Property Name="Descripcion2" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Descripcion2"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,43 @@
+{
+    "dataBinding": {
+        "/webapp/view/Inicio.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Aliados_1.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Seguros_1.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Contactos.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/InfoProducto_1.view.xml": {
+            "entitySet": "/ProductSet"
+        }, 
+        "/webapp/view/InfoAseguradora.view.xml": {
+            "entitySet": "/SupplierSet"
+        }, 
+        "/webapp/view/Comparar.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/InfoComparacion.view.xml": {
+            "entitySet": "/ComparacionSet"
+        }, 
+        "/webapp/view/popover_1.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/popover_3.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/popover_4.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Popover1.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Popover2.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}
